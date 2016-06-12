@@ -4,7 +4,7 @@
 		<form role="form" name="manage_schedule_form" novalidate>
 			<div class="form-group">
 				<label for="firstname">First Name&nbsp;<span class="required-fields">*</span></label>
-				<input type="text" class="form-control" id="firstname" name="firstname" ng-model="scheduling.firstname" required>
+				<input type="text" class="form-control" id="firstname" name="firstname" ng-model="scheduling.firstname" placeholder="Ex: Nilesh" required>
 				<div ng-show="manage_schedule_form.$submitted || manage_schedule_form.firstname.$touched">
 					<span class="error-message" ng-show="manage_schedule_form.firstname.$error.required">
 						Please enter First Name.
@@ -13,7 +13,7 @@
 			</div>
 			<div class="form-group">
 				<label for="pwd">Last Name&nbsp;<span class="required-fields">*</span></label>
-				<input type="text" class="form-control" id="lastname" name="lastname" ng-model="scheduling.lastname" required>
+				<input type="text" class="form-control" id="lastname" name="lastname" ng-model="scheduling.lastname" placeholder="Ex: Mistry" required>
 				<div ng-show="manage_schedule_form.$submitted || manage_schedule_form.lastname.$touched">
 					<span class="error-message" ng-show="manage_schedule_form.lastname.$error.required">
 						Please enter Last Name.
@@ -22,7 +22,7 @@
 			</div>
 			<div class="form-group">
 				<label for="pwd">Phone Number&nbsp;<span class="required-fields">*</span></label>
-				<input type="text" class="form-control" id="phone_number" name="phone_number" ng-model="scheduling.phoneNumber" ng-pattern="scheduling.phoneRegex" required>
+				<input type="text" class="form-control" id="phone_number" name="phone_number" ng-model="scheduling.phoneNumber" ng-pattern="scheduling.phoneRegex" placeholder="Ex: 8401434544" required>
 				<div ng-show="manage_schedule_form.$submitted || manage_schedule_form.phone_number.$touched">
 					<span class="error-message" ng-show="manage_schedule_form.phone_number.$error.required">
 						Please enter Phone Number.
@@ -32,7 +32,7 @@
 					</span>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-default" ng-click="scheduling.saveUserData(manage_schedule_form)">Submit</button>&nbsp;&nbsp;
+			<button type="submit" class="btn btn-default" ng-click="scheduling.saveUserData(manage_schedule_form)">Save</button>&nbsp;&nbsp;
 			<button type="submit" ui-sref="app.schedule.list" class="btn btn-default">Cancel</button>
 		</form>
 	</div>
