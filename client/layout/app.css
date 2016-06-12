@@ -25,6 +25,12 @@ label {
 	font-weight: normal;
 }
 
+.fixed-header {
+	width: 100%;
+	z-index: 1000;
+	position: fixed;
+}
+
 .navbar-active {
 	color: #2e3344;
 }
@@ -41,12 +47,13 @@ label {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: 15px;
-    margin-left: 280px;
+    margin-left: 244px;
+    padding-top: 62px;
 }
 
 .content-label {
 	font-size: 25px;
-	padding-left: 10px;
+	padding-left: 18px;
 	padding-bottom: 20px;
 }
 

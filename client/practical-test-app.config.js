@@ -7,9 +7,14 @@
 (function(){
 	angular.module('PracticalTestApp')
 		.run(['$rootScope', RunPracticalTestApp])
-		.config(['$stateProvider', '$urlRouterProvider', ConfigPracticalTestApp]);
+		.config(['$stateProvider', '$urlRouterProvider', 'ngToastProvider', ConfigPracticalTestApp]);
 
-	function ConfigPracticalTestApp($stateProvider, $urlRouterProvider){
+	function ConfigPracticalTestApp($stateProvider, $urlRouterProvider, ngToastProvider){
+		ngToastProvider.configure({
+			animation: 'fade',
+			horizontalPosition: 'center',
+			dismissButton: true
+		});
 		$urlRouterProvider.otherwise('/app/dashboard');
 
 		$stateProvider.state('app', {

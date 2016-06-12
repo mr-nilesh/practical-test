@@ -10,8 +10,8 @@
 		.module('PracticalTestApp')
 		.controller('EditScheduleController', Controller);
 
-	Controller.$inject = ['$rootScope', '$scope', '$stateParams', 'SchedulingService', '$state'];
-	function Controller($rootScope, $scope, $stateParams, SchedulingService, $state){
+	Controller.$inject = ['$rootScope', '$scope', '$stateParams', 'SchedulingService', '$state', 'ngToast'];
+	function Controller($rootScope, $scope, $stateParams, SchedulingService, $state, ngToast){
 		var vm = this;
 
 		//method declarations
@@ -20,18 +20,26 @@
 		Activate();
 
 		function Activate() {
-			$scope.app.activeMenu='schedule';
-			vm.phoneRegex = /^[0-9]{10,10}$/;
-			vm.timeFormat = localStorage.getItem("timeFormat");
 			SchedulingService.getSpecificTimeslot($stateParams.id)
 				.then(function(data){
-					vm.timeslotDetails = data;
-					vm.firstname = data.firstname;
-					vm.lastname = data.lastname;
-					vm.phoneNumber = data.phoneno;
+					if(data) {
+						vm.timeslotDetails = data;
+						vm.currentSlot = data.slot;
+						vm.firstname = data.firstname;
+						vm.lastname = data.lastname;
+						vm.phoneNumber = data.phoneno;
+					} else {
+						console.log(ngToast.danger);
+						ngToast.danger("The slot your are trying to use is no longer exist.");
+						$state.go('app.schedule.list');
+						return;
+					}
 				}, function(err){
 
 				});
+			$scope.app.activeMenu='schedule';
+			vm.phoneRegex = /^[0-9]{10,10}$/;
+			vm.timeFormat = localStorage.getItem("timeFormat");
 		}
 
 		function SaveUserData (formName){
@@ -41,10 +49,11 @@
 					'lastname': vm.lastname,
 					'phoneno': vm.phoneNumber,
 					'isAvailable': false,
-					'slot': vm.timeslotDetails.slot
+					'slot': vm.currentSlot
 				};
 				SchedulingService.saveTimeslotDetails($stateParams.id, postData)
 					.then(function(data){
+						ngToast.success('We have updated your details.');
 						$state.go('app.schedule.list');
 					}, function(err){
 

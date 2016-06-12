@@ -3,12 +3,15 @@
 	<head>
 		<title ng-bind="app.title"></title>
 
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="bower_components/ngToast/dist/ngToast.min.css" />
+		<link rel="stylesheet" href="bower_components/ngToast/dist/ngToast-animations.min.css">
 		<link href="/layout/css/sb-admin.css" rel="stylesheet">
 		<link rel="stylesheet" href="layout/app.css">
 	</head>
 <body>
+	<toast></toast>
 	<div id="app" ui-view></div>
 	<!-- lib -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -17,6 +20,10 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 	<script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+	<script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="bower_components/ngToast/dist/ngToast.min.js"></script>
 	<!-- /libs -->
 	<!-- app related js -->
 	<script src="practical-test-app.module.js"></script>

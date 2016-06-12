@@ -4,6 +4,7 @@
 	angular.module('PracticalTestApp', [
 		'ui.router',
 		'oc.lazyLoad',
-		'ngLodash'
+		'ngLodash',
+		'ngToast'
 	]);
 })();
