@@ -1,3 +1,9 @@
+/**
+ * Author: Nilesh Mistry
+ * Created Date: 11/06/2016
+ * This file defines the services for Scheduling module
+ *
+ **/
 'use strict';
 (function(){
 	angular
@@ -40,6 +46,9 @@
 		}
 
 		function GetSpecificTimeslot(timeslotId){
+			// TODO: Once API is complete use below API endpoint 
+			// Endpoint: /timeslots/:timeslot_id
+			// Method: Get
 			var deferred = $q.defer();
 			var timeslots = localStorage.getItem("timeslots");
 			var timeslotDetails = _.find(JSON.parse(timeslots), {timeslotId: timeslotId});
@@ -48,6 +57,9 @@
 		}
 
 		function SaveTimeslotDetails(timeslotId, postData){
+			// TODO: Once API is complete use this API endpoint
+			// Endpoint: /timeslots/:timeslot_id
+			// Method: Post
 			postData.timeslotId = timeslotId;
 			var deferred = $q.defer();
 			var timeslots = JSON.parse(localStorage.getItem("timeslots"));
