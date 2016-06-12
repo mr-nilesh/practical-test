@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app="PracticalTestApp" ng-controller="AppController">
+	<head>
+		<title ng-bind="app.title"></title>
+
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css" />
+		<link href="/layout/css/sb-admin.css" rel="stylesheet">
+		<link rel="stylesheet" href="layout/app.css">
+	</head>
+<body>
+	<div id="app" ui-view></div>
+	<!-- lib -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+	<script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+	<!-- /libs -->
+	<!-- app related js -->
+	<script src="practical-test-app.module.js"></script>
+	<script src="practical-test-app.config.js"></script>
+	<script src="modules/scheduling/scheduling.route.js"></script>
+	<script src="modules/scheduling/services/scheduling.service.js"></script>
+	<script src="main.controller.js"></script>
+	<script src="components/custom.directive.js"></script>
+	<!-- /app related js -->
+</body>
+</html>

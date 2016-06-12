@@ -1,0 +1,77 @@
+{
+	"Status": "success",
+	"Data": [
+		{
+			"timeslotId": "1",
+			"slot": "09:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "2",
+			"slot": "10:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "3",
+			"slot": "11:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "4",
+			"slot": "12:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "5",
+			"slot": "13:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "6",
+			"slot": "14:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "7",
+			"slot": "15:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "8",
+			"slot": "16:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		},
+		{
+			"timeslotId": "9",
+			"slot": "17:00",
+			"firstname": "",
+			"lastname": "",
+			"phoneno": "",
+			"isAvailable": true
+		}
+	]
+}
